@@ -10,7 +10,9 @@ How it works: The program will launch a select folder window. After a folder is 
 
 Prerequisites: FFmpeg installed to path. 
 If you don't have ffmpeg installed, copy and paste/run the script in "script.txt" then paste this into the terminal.
+
 $env:Path += ";C:\Users\[USER]\ffmpeg\ffmpeg-7.1.1-essentials_build\bin"
+
 Note: replace [USER] with your username.
 
 
