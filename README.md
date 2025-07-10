@@ -3,12 +3,15 @@ Tools I have made to help archive and clean up files. These are free for anyone 
 
 # Bulk WAV to FLAC
 Does exactly what you think it does but a little more. 
+
 It uses ffmpeg to convert any wav file to flac. This results in about a 50% file size saving while still mantaining loseless compression in case you want to go back to the files at some point.
+
 The whole purpose I created this was because I had about 2 terabytes of multitracks from band practice I felt I would never touch again but couldn't bring myself to delete it, so I figured if it was half the size I wouldn't mind holding on to it.
 
 How it works: The program will launch a select folder window. After a folder is selected the program will look for wav files through every subfolder. One at a time, it will convert the file to FLAC, place it in the same spot and delete the wav file.
 
 Prerequisites: FFmpeg installed to path. 
+
 If you don't have ffmpeg installed, copy and paste/run the script in "script.txt" then paste this into the terminal.
 
 $env:Path += ";C:\Users\[USER]\ffmpeg\ffmpeg-7.1.1-essentials_build\bin"
