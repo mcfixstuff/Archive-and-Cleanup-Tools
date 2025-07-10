@@ -1,0 +1,18 @@
+$ffmpegUrl = "https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip"
+$zipPath = "$env:TEMP\ffmpeg.zip"
+$extractPath = "$env:USERPROFILE\ffmpeg"
+Invoke-WebRequest -Uri $ffmpegUrl -OutFile $zipPath
+New-Item -ItemType Directory -Force -Path $extractPath | Out-Null
+Expand-Archive -Path $zipPath -DestinationPath $extractPath -Force
+$binPath = Get-ChildItem -Path $extractPath -Recurse -Directory | Where-Object { $_.Name -eq "bin" } | Select-Object -First 1
+$envPath = [Environment]::GetEnvironmentVariable("Path", "User")
+if ($envPath -notlike "*$($binPath.FullName)*") {
+    [Environment]::SetEnvironmentVariable("Path", "$envPath;$($binPath.FullName)", "User")
+    Write-Output "FFmpeg bin path added to PATH: $($binPath.FullName)"
+} else {
+    Write-Output "FFmpeg path already exists in PATH."
+}
+
+Remove-Item $zipPath
+
+& "$($binPath.FullName)\ffmpeg.exe" -version
