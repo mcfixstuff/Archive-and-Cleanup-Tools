@@ -18,4 +18,4 @@ $env:Path += ";C:\Users\[USER]\ffmpeg\ffmpeg-7.1.1-essentials_build\bin"
 
 Note: replace [USER] with your username.
 
-
+In that same terminal, run the .py file.
