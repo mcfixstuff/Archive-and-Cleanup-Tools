@@ -28,14 +28,14 @@ def delete_pkf_files(folder_path):
                     os.remove(file_path)
                     deleted_files.append(file_path)
                     total_bytes_saved += file_size
-                    print(f"🗑️ Deleted: {file_path} ({format_bytes(file_size)})")
+                    print(f"Deleted: {file_path} ({format_bytes(file_size)})")
                 except Exception as e:
-                    print(f"❌ Error deleting {file_path}: {e}")
+                    print(f"Error deleting {file_path}: {e}")
 
     print("\nSummary:")
     if deleted_files:
-        print(f"✅ Deleted {len(deleted_files)} .pkf file(s).")
-        print(f"💾 Total space saved: {format_bytes(total_bytes_saved)}")
+        print(f"Deleted {len(deleted_files)} .pkf file(s).")
+        print(f"Total space saved: {format_bytes(total_bytes_saved)}")
     else:
         print("No .pkf files found.")
 
