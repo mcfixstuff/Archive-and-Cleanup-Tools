@@ -19,3 +19,13 @@ $env:Path += ";C:\Users\[USER]\ffmpeg\ffmpeg-7.1.1-essentials_build\bin"
 Note: replace [USER] with your username.
 
 In that same terminal, run the .py file.
+
+# PKF cleaner
+
+Shouldn't require any extra setup like the former tool.
+
+Super helpful for a drive full of Adobe Audition files you wont touch for a long long time.
+
+The program will dig through every subfolder of the directory you choose, then find and delete every pkf file.
+
+If you ever choose to reopen the Adobe Audition project at a later date, Audition will generate new pkf files. 
