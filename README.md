@@ -29,3 +29,15 @@ Super helpful for a drive full of Adobe Audition files you wont touch for a long
 The program will dig through every subfolder of the directory you choose, then find and delete every pkf file.
 
 If you ever choose to reopen the Adobe Audition project at a later date, Audition will generate new pkf files. 
+
+# Metadata Binner
+
+This is a tool that will go through a folder with a bunch of files and bin them into year folders by their metadata.
+
+This is useful for services like MyCloud auto backup that just dumps all your photos and videos into one folder.
+
+Run the python script and it will pop open a window to choose a folder.
+
+Open the folder of files you want to sort. This will not check subfolders.
+
+Let it run.
